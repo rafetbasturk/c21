@@ -82,7 +82,7 @@
     </div>
   </article>
 
-  <section class="quotes">
+  <div class="quotes">
     <img id="quote-image" src="./images/bg-quotes.png" alt="quotes">
     <div class="quotes__card">
       <p>Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
@@ -116,16 +116,16 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
   <aside>
     <h2>Get early access today</h2>
     <p>It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our
       support team would be happy to help you.</p>
-    <form>
-      <input type="email" name="email" id="email" aria-label="register your email" placeholder="email@example.com" required>
+    <form novalidate>
+      <input tabindex="1" type="email" name="email" id="email" aria-label="register your email" placeholder="email@example.com">
       <div id="errorMessage"></div>
-      <button onclick="clickBtn()" type="submit">Get Started For Free</button>
+      <button onclick="clickBtn()" type="button">Get Started For Free</button>
     </form>
   </aside>
 
@@ -154,9 +154,9 @@
     </ul>
 
     <div id="social-links">
-      <a href="#"><ion-icon name="logo-facebook" size="large"></ion-icon></a>
-      <a href="#"><ion-icon name="logo-twitter" size="large"></ion-icon></a>
-      <a href="#"><ion-icon name="logo-instagram" size="large"></ion-icon></a>
+      <a href="http://www.facebook.com"><ion-icon name="logo-facebook" size="large"></ion-icon></a>
+      <a href="http://www.twitter.com"><ion-icon name="logo-twitter" size="large"></ion-icon></a>
+      <a href="http://www.instagram.com"><ion-icon name="logo-instagram" size="large"></ion-icon></a>
     </div>
 
     <p class="attribution">
@@ -169,7 +169,6 @@
     const email = document.getElementById("email");
     let errorMessage = document.getElementById("errorMessage");
     const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
 
     function clickBtn() {
       if (email.value === "") {

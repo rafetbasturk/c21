@@ -16,6 +16,8 @@ body {
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.5;
+  max-width: 1440px;
+  margin: auto;
 }
 
 h1, h2 {
@@ -274,6 +276,7 @@ aside form button {
   color: white;
   font-size: 1.5rem;
   font-weight: 700;
+  cursor: pointer;
 }
 
 aside form button:hover {
@@ -422,7 +425,7 @@ footer .attribution a {
   footer {
     display: -ms-grid;
     display: grid;
-    
+    -ms-grid-columns: (minmax(min-content, 1fr))(6);
         grid-template-columns: repeat(6, minmax(-webkit-min-content, 1fr));
         grid-template-columns: repeat(6, minmax(min-content, 1fr));
     -webkit-box-align: start;
@@ -521,7 +524,7 @@ footer .attribution a {
   }
   header nav a {
     font-size: 1rem;
-    padding-left: 2rem;
+    margin-left: 2rem;
   }
   header p {
     margin: auto 5rem;
@@ -618,12 +621,12 @@ footer .attribution a {
     -ms-grid-column-span: 1;
     grid-column: 1 / 2;
     row-gap: .5rem;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
   footer #contact-info p {
     font-size: .95rem;
+  }
+  footer #contact-info img {
+    margin-top: .25rem;
   }
   footer #contact-info img:first-of-type {
     padding-top: 0;
@@ -646,7 +649,6 @@ footer .attribution a {
     -ms-grid-column: 4;
     -ms-grid-column-span: 1;
     grid-column: 4 / 5;
-    font-size: .85rem;
   }
   footer #contact-info img:nth-of-type(3) {
     -ms-grid-column: 3;
@@ -657,7 +659,6 @@ footer .attribution a {
     -ms-grid-column: 4;
     -ms-grid-column-span: 1;
     grid-column: 4 / 5;
-    font-size: .85rem;
   }
   footer ul:first-of-type {
     -ms-grid-column: 3;
